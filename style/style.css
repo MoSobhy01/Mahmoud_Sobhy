@@ -1,0 +1,550 @@
+:root {
+}
+*::selection {
+  background-color: black;
+  color: darkslategrey;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  scroll-behavior: smooth;
+  font-family: "Comfortaa", cursive;
+}
+
+.container {
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+body {
+  height: 100vh;
+  width: 100%;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1400px;
+  }
+}
+.sphead {
+  display: flex;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #969696;
+}
+.sphead h2 {
+  font-size: 2.2rem;
+  color: #00564d;
+}
+.sphead p {
+  padding-top: 20px;
+  max-width: 70%;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+.sphead p span {
+  font-size: 1.3rem;
+  color: #00897b;
+}
+.header {
+  background-image: url(../images/wallpaperflare.com_wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7;
+}
+.header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.header .container .nav {
+  display: flex;
+  width: 100%;
+
+  justify-content: space-between;
+}
+.header .container .nav ul {
+  flex: 1;
+  display: flex;
+  list-style: none;
+  gap: 5px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fa-bars {
+  display: none;
+  padding-top: 15px;
+  color: #3c5855e1;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.header .container .nav ul li {
+  padding: 8px;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+}
+.header .container .nav ul li :hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .header .container .nav ul li:hover::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: #077c6f;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.header .container .nav ul a {
+  text-decoration: none;
+  color: #077c6f;
+  font-size: 1rem;
+}
+.header .container .logo span {
+  font-family: "Comfortaa", cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00564d;
+  letter-spacing: -3px;
+  display: flex;
+}
+@media (max-width: 820px) {
+  .header .container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .header .container .nav {
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .header .container .nav ul {
+    display: none;
+    padding-top: 10px;
+  }
+  .fa-bars {
+    display: block;
+  }
+  .fa-bars:hover {
+    cursor: pointer;
+  }
+  .header .container .nav li {
+    width: 100%;
+    text-align: center;
+  }
+  .header .container .nav .fa-bars:hover + ul,
+  .header .container .nav ul:hover {
+    padding: 0px;
+    position: absolute;
+    top: 100%;
+    z-index: 3;
+    gap: 0px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #282828dc;
+  }
+
+  .header .container .nav ul li:not(:last-child) {
+    border-bottom: 2px solid #3c5855e1;
+  }
+  .header .container .nav ul li:hover {
+    background-color: #58757289;
+    border-radius: 10px;
+  }
+}
+.header .container .piccontainer {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.header .container .pic {
+  position: absolute;
+}
+.header .container .pic img {
+  display: block;
+  width: 250px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 10px solid #44d4c8bf;
+}
+.header .container .pic::after {
+  box-sizing: content-box;
+  content: "";
+  width: 250px;
+  height: 250px;
+  background-color: rgba(75, 161, 161, 0.66);
+  z-index: -1;
+  border: 20px solid rgba(75, 161, 161, 0.66);
+  opacity: 0.6;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.header .container .pic::before {
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-color: #282828;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 145px;
+  border-radius: 20px;
+}
+.header .container .pic p {
+  text-align: center;
+  padding: 10px;
+  padding-top: 40px;
+  max-width: 300px;
+  color: #969696;
+  font-size: 17px;
+  line-height: 1.7rem;
+}
+
+.header .container .pic p span {
+  display: inline-block;
+  color: #00796b;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+.About {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: #1c1c1c;
+  width: 100%;
+}
+.About .sphead p {
+  width: 100%;
+  flex: 1;
+}
+
+.About .container {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+  justify-items: center;
+  gap: 20px;
+}
+.spframe {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  background-color: #232323;
+}
+.About .container .spframe .sphead {
+  width: 100%;
+  padding: 10px;
+}
+.About .container .spframe .sphead h2 {
+  font-size: 1.6rem;
+  align-self: flex-start;
+  position: relative;
+}
+.About .container .spframe .sphead h2::after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background-color: #00897b;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.About .container .spframe ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+}
+.About .container .spframe ul li {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #969696;
+}
+.About .container .spframe ul li span {
+  color: #00897b;
+  font-size: 1.1rem;
+  display: block;
+  padding-left: 10px;
+  min-width: 150px;
+  text-align: left;
+}
+@media (max-width: 820px) {
+  .About .sphead p {
+    max-width: 100%;
+  }
+  .About .container .spframe ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+  .About .container .spframe ul li i {
+    display: none;
+  }
+  .About .container .spframe ul li span {
+    min-width: 110px;
+  }
+}
+.hobbiescontainer {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.block {
+  background-color: #2828289e;
+  display: flex;
+  width: 100px;
+  height: 80px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #969696;
+}
+
+i {
+  font-size: 1.6rem;
+  color: #00564d;
+  min-width: 30px;
+}
+div.games.spframe.block .fa-solid {
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+.Tools {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: #1b1919;
+  width: 100%;
+}
+.sphead i {
+  font-size: 2.2rem;
+}
+.Tools .block {
+  border-radius: 20px;
+}
+.Tools .container {
+  padding-top: 20px;
+  max-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .Tools .container {
+    max-width: 100%;
+  }
+}
+.Tools .container .block img {
+  display: block;
+  width: 70px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.Projects {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-color: #000000e3;
+  width: 100%;
+}
+.Projects .container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  perspective: 30px;
+  perspective-origin: center;
+}
+.Projects .container .spframe {
+  width: 350px;
+  height: 400px;
+  padding: 2px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  background-color: #2828289e;
+  align-items: center;
+  justify-content: space-between;
+}
+.Projects .container .spframe:hover {
+  transform: translateZ(1px);
+}
+.Projects .container .spframe img {
+  display: block;
+  max-width: calc(100% - 2px);
+
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  object-fit: fill;
+  overflow: hidden;
+}
+.spdesc {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+.spdesc h3 {
+  color: #00796b;
+}
+.spdesc p {
+  color: #969696;
+}
+.spdesc a {
+  text-decoration: none;
+  color: #077c6f;
+  display: block;
+  align-self: flex-end;
+}
+.spdesc a:hover {
+  font-weight: bold;
+}
+.spdesc a i {
+  font-size: 1rem;
+}
+.contact {
+  padding-top: 50px;
+  background-color: black;
+}
+.contact .container a {
+  display: block;
+}
+.contact .container {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contact p {
+  color: #00564d;
+  text-align: center;
+}
+.contact .container p {
+  width: 100%;
+  color: #969696;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.contact .container img {
+  display: block;
+  width: 50px;
+  margin: 20px;
+}
+.About .sphead a {
+  padding-top: 15px;
+}
+.About .sphead a button:hover {
+  cursor: pointer;
+}
+.About .sphead a i {
+  color: #969696;
+  font-size: 1.2rem;
+}
+.About .sphead a button {
+  background-color: #00564d;
+  border-radius: 15px;
+  color: #969696;
+
+  border: none;
+  padding: 10px;
+}
