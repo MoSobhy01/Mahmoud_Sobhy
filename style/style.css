@@ -1,4 +1,9 @@
 :root {
+  --main-head: #00564d;
+  --main-body:#969696;
+  --frame-background:#232323;
+  --block-background:#2828289e;
+  --nav-links:#077c6f;
 }
 *::selection {
   background-color: black;
@@ -56,11 +61,11 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #969696;
+  color: var(--main-body);
 }
 .sphead h2 {
   font-size: 2.2rem;
-  color: #00564d;
+  color: var(--main-head);
 }
 .sphead p {
   padding-top: 20px;
@@ -123,7 +128,7 @@ body {
 .fa-bars {
   display: none;
   padding-top: 15px;
-  color: #3c5855e1;
+  color: var(--main-head);
   font-size: 1.2rem;
   width: 100%;
 }
@@ -143,7 +148,7 @@ body {
     width: 100%;
     height: 1px;
     position: absolute;
-    background-color: #077c6f;
+    background-color: var(--nav-links);
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
@@ -152,14 +157,14 @@ body {
 
 .header .container .nav ul a {
   text-decoration: none;
-  color: #077c6f;
+  color: var(--nav-links);
   font-size: 1rem;
 }
 .header .container .logo span {
   font-family: "Comfortaa", cursive;
   font-size: 3rem;
   font-weight: bold;
-  color: #00564d;
+  color: var(--main-head);
   letter-spacing: -3px;
   display: flex;
 }
@@ -256,7 +261,7 @@ body {
   content: "";
   width: 300px;
   height: 300px;
-  background-color: #282828;
+  background-color: var(--frame-background);
   position: absolute;
   z-index: -1;
   left: 50%;
@@ -269,7 +274,7 @@ body {
   padding: 10px;
   padding-top: 40px;
   max-width: 300px;
-  color: #969696;
+  color: var(--main-body);
   font-size: 17px;
   line-height: 1.7rem;
 }
@@ -310,7 +315,7 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   border-radius: 15px;
-  background-color: #232323;
+  background-color: var(--frame-background);
 }
 .About .container .spframe .sphead {
   width: 100%;
@@ -325,7 +330,7 @@ body {
   content: "";
   width: 50%;
   height: 2px;
-  background-color: #00897b;
+  background-color: var(--main-head);
   border-radius: 2px;
   position: absolute;
   bottom: -10px;
@@ -343,10 +348,10 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: #969696;
+  color: var(--main-body);
 }
 .About .container .spframe ul li span {
-  color: #00897b;
+  color: var(--nav-links);
   font-size: 1.1rem;
   display: block;
   padding-left: 10px;
@@ -379,7 +384,7 @@ body {
   gap: 30px;
 }
 .block {
-  background-color: #2828289e;
+  background-color: var(--block-background);
   display: flex;
   width: 100px;
   height: 80px;
@@ -388,12 +393,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  color: #969696;
+  color: var(--main-body);
 }
 
 i {
   font-size: 1.6rem;
-  color: #00564d;
+  color: var(--main-head);
   min-width: 30px;
 }
 div.games.spframe.block .fa-solid {
@@ -456,7 +461,7 @@ div.games.spframe.block .fa-solid {
   transition: 0.5s;
   display: flex;
   flex-direction: column;
-  background-color: #2828289e;
+  background-color: var(--block-background);
   align-items: center;
   justify-content: space-between;
 }
@@ -481,14 +486,14 @@ div.games.spframe.block .fa-solid {
   gap: 10px;
 }
 .spdesc h3 {
-  color: #00796b;
+  color: var(--nav-links);
 }
 .spdesc p {
-  color: #969696;
+  color: var(--main-body);
 }
 .spdesc a {
   text-decoration: none;
-  color: #077c6f;
+  color: var(--nav-links);
   display: block;
   align-self: flex-end;
 }
@@ -514,12 +519,12 @@ div.games.spframe.block .fa-solid {
   gap: 20px;
 }
 .contact p {
-  color: #00564d;
+  color: var(--main-head);
   text-align: center;
 }
 .contact .container p {
   width: 100%;
-  color: #969696;
+  color: var(--main-body);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -537,13 +542,13 @@ div.games.spframe.block .fa-solid {
   cursor: pointer;
 }
 .About .sphead a i {
-  color: #969696;
+  color: var(--main-body);
   font-size: 1.2rem;
 }
 .About .sphead a button {
-  background-color: #00564d;
+  background-color: var(--main-head);
   border-radius: 15px;
-  color: #969696;
+  color: var(--main-body);
 
   border: none;
   padding: 10px;
