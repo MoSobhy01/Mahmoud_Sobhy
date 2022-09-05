@@ -173,7 +173,8 @@ body {
   font-family: "Comfortaa", cursive;
   font-size: 3rem;
   font-weight: bold;
-  color: #00796b;
+  color: var(--main-head);
+  filter: contrast(0.6);
   letter-spacing: -3px;
   display: flex;
 }
@@ -294,7 +295,8 @@ body {
 
 .header .container .pic p span {
   display: inline-block;
-  color: #00796b;
+  color: var(--main-head);
+  filter: contrast(1) hue-rotate(5deg);
   text-transform: capitalize;
   margin-bottom: 10px;
   font-size: 1.7rem;
