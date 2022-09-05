@@ -1,12 +1,19 @@
-:root {
-  --main-head: #00564d;
-  --main-body:#969696;
-  --frame-background:#232323;
-  --block-background:#2828289e;
-  --nav-links:#077c6f;
+:root  {
+
+    --main-head: #00564d;
+  --main-body: #969696;
+  --frame-background: #232323;
+  --block-background: #2828289e;
+  --nav-links: #077c6f;
+  --about-backg: #1c1c1c;
+  --tools-backg: #1b1919;
+  --projects-backg: #000000e3;
+  --contact-backg: black;
+  --project-frame: #2828289e;
 }
+
 *::selection {
-  background-color: black;
+  background-color: rgb(65, 65, 65);
   color: darkslategrey;
 }
 * {
@@ -94,7 +101,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   opacity: 0.7;
 }
 .header .container {
@@ -112,6 +119,8 @@ body {
 }
 .header .container .nav {
   display: flex;
+  flex-wrap: wrap;
+
   width: 100%;
 
   justify-content: space-between;
@@ -164,7 +173,7 @@ body {
   font-family: "Comfortaa", cursive;
   font-size: 3rem;
   font-weight: bold;
-  color: var(--main-head);
+  color: #00796b;
   letter-spacing: -3px;
   display: flex;
 }
@@ -184,11 +193,15 @@ body {
     width: 100%;
   }
   .header .container .nav ul {
-    display: none;
+    
     padding-top: 10px;
+    padding: 0px;
+    position: absolute;
+    top: -350%;
   }
   .fa-bars {
     display: block;
+    max-width: 50px;
   }
   .fa-bars:hover {
     cursor: pointer;
@@ -199,10 +212,10 @@ body {
   }
   .header .container .nav .fa-bars:hover + ul,
   .header .container .nav ul:hover {
-    padding: 0px;
-    position: absolute;
-    top: 100%;
+   
     z-index: 3;
+    transition: 0.4s;
+    transform: translateY(224%);
     gap: 0px;
     min-width: 250px;
     display: flex;
@@ -260,7 +273,7 @@ body {
 .header .container .pic::before {
   content: "";
   width: 300px;
-  height: 300px;
+  height: 275px;
   background-color: var(--frame-background);
   position: absolute;
   z-index: -1;
@@ -290,7 +303,7 @@ body {
 .About {
   padding-top: 50px;
   padding-bottom: 30px;
-  background-color: #1c1c1c;
+  background-color: var(--about-backg);
   width: 100%;
 }
 .About .sphead p {
@@ -324,6 +337,7 @@ body {
 .About .container .spframe .sphead h2 {
   font-size: 1.6rem;
   align-self: flex-start;
+  padding: 10px;
   position: relative;
 }
 .About .container .spframe .sphead h2::after {
@@ -407,9 +421,13 @@ div.games.spframe.block .fa-solid {
 }
 .Tools {
   padding-top: 50px;
-  padding-bottom: 30px;
-  background-color: #1b1919;
-  width: 100%;
+    padding-bottom: 30px;
+    background-color: var(--tools-backg);
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .sphead i {
   font-size: 2.2rem;
@@ -440,7 +458,7 @@ div.games.spframe.block .fa-solid {
 .Projects {
   padding-top: 50px;
   padding-bottom: 30px;
-  background-color: #000000e3;
+  background-color: var(--projects-backg);
   width: 100%;
 }
 .Projects .container {
@@ -457,20 +475,20 @@ div.games.spframe.block .fa-solid {
 .Projects .container .spframe {
   width: 350px;
   height: 400px;
-  padding: 2px;
+  
   transition: 0.5s;
   display: flex;
   flex-direction: column;
-  background-color: var(--block-background);
+  background-color: var(--project-frame);
   align-items: center;
   justify-content: space-between;
 }
 .Projects .container .spframe:hover {
-  transform: translateZ(1px);
+  transform: translateZ(1.5px);
 }
 .Projects .container .spframe img {
   display: block;
-  max-width: calc(100% - 2px);
+  max-width: 100% ;
 
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
@@ -487,6 +505,8 @@ div.games.spframe.block .fa-solid {
 }
 .spdesc h3 {
   color: var(--nav-links);
+      filter: contrast(2.5) hue-rotate(-20deg);
+
 }
 .spdesc p {
   color: var(--main-body);
@@ -494,6 +514,7 @@ div.games.spframe.block .fa-solid {
 .spdesc a {
   text-decoration: none;
   color: var(--nav-links);
+  filter: brightness(0.5) contrast(0.5) hue-rotate(-50deg);
   display: block;
   align-self: flex-end;
 }
@@ -504,19 +525,22 @@ div.games.spframe.block .fa-solid {
   font-size: 1rem;
 }
 .contact {
-  padding-top: 50px;
-  background-color: black;
+  padding-top: 30px;
+  background-color: var(--contact-backg);
+}
+.contact .sphead{
+  margin: 0px;
 }
 .contact .container a {
   display: block;
 }
 .contact .container {
-  padding-top: 20px;
+  padding-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  
 }
 .contact p {
   color: var(--main-head);
@@ -528,15 +552,16 @@ div.games.spframe.block .fa-solid {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .contact .container img {
   display: block;
   width: 50px;
-  margin: 20px;
+  padding: 5px;
+  
 }
 .About .sphead a {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 .About .sphead a button:hover {
   cursor: pointer;
@@ -552,4 +577,24 @@ div.games.spframe.block .fa-solid {
 
   border: none;
   padding: 10px;
+}
+
+.dark:hover,.light:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.727);
+  color: var(--nav-links);
+}
+.dark,.light{
+  background-color: var(--main-head);
+  display: block;
+  border: none;
+  color: var(--main-body);
+  border-radius: 20px;
+  width: 125px;
+  height: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.light{
+  display: none;
 }
