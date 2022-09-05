@@ -8,28 +8,67 @@
     <link rel="stylesheet" href="style/Normalize.css" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" href="https://img.icons8.com/external-flat-icons-inmotus-design/344/external-M-star-wars-flat-icons-inmotus-design.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script>
+      var store = document.querySelector(":root");
+
+      var modl = document.querySelector(".light");
+      function setdarkmode() {
+        store.style.setProperty("--frame-background", "#E7F6F2");
+        store.style.setProperty("--main-head", "#48b8ad");
+        store.style.setProperty("--main-body", "#181313");
+        store.style.setProperty("--block-background", "#EFFFFD");
+        store.style.setProperty("--nav-links", "#4a8a83");
+        store.style.setProperty("--about-backg", "white");
+        store.style.setProperty("--tools-backg", "#dfeeea");
+        store.style.setProperty("--projects-backg", "#effcf9");
+        store.style.setProperty("--project-frame", "#00897b21");
+        store.style.setProperty("--contact-backg", "#3c3c3c24");
+        document.querySelector(".dark").style.display = "none";
+        document.querySelector(".light").style.display = "block";
+      }
+      function setlightmode() {
+        store.style.setProperty("--frame-background", " #232323");
+        store.style.setProperty("--main-head", "#00564d");
+        store.style.setProperty("--main-body", "#969696");
+        store.style.setProperty("--block-background", "#2828289e");
+        store.style.setProperty("--nav-links", "#077c6f");
+        store.style.setProperty("--about-backg", "#1c1c1c");
+        store.style.setProperty("--tools-backg", "#1b1919");
+        store.style.setProperty("--projects-backg", "#000000e3");
+        store.style.setProperty("--project-frame", "#2828289e");
+        store.style.setProperty("--contact-backg", "black");
+        document.querySelector(".light").style.display = "none";
+        document.querySelector(".dark").style.display = "block";
+      }
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Comfortaa:wght@300;500;600;700&family=Righteous&display=swap"
       rel="stylesheet"
     />
+
     <title>Mahmoud</title>
   </head>
   <body>
     <div class="header">
       <div class="container">
+        <button type="button" class="dark" onclick="setdarkmode()">
+          Light Mode
+        </button>
+        <button type="button" class="light" onclick="setlightmode()">
+          Dark Mode
+        </button>
         <div class="nav">
           <div class="logo">
             <span>Mahmoud</span>
           </div>
           <i class="fa-solid fa-bars"></i>
           <ul>
-            <li><a  href="#ab">About</a></li>
-            <li><a  href="#tl">Tools</a></li>
-            <li><a  href="#pr">Projects</a></li>
-            <li><a  href="#re">Resume</a></li>
-            <li><a  href="#co">Contact</a></li>
+            <li><a href="#ab">About</a></li>
+            <li><a href="#tl">Tools</a></li>
+            <li><a href="#pr">Projects</a></li>
+            <li><a href="#re">Resume</a></li>
+            <li><a href="#co">Contact</a></li>
           </ul>
         </div>
         <div class="piccontainer">
@@ -55,7 +94,11 @@
           gaining experience and skills of teamwork, prioritizing, delegation
           and meeting deadlines.
         </p>
-        <a href="#" id="re"><button>Download Resume from here <i class="fa-solid fa-arrow-down"></i></button></a>
+        <a href="#" id="re"
+          ><button>
+            Download Resume from here
+            <i class="fa-solid fa-arrow-down"></i></button
+        ></a>
       </div>
       <div class="container">
         <div class="info spframe">
@@ -74,8 +117,14 @@
               <i class="fa-solid fa-at"></i><span>Email</span>
               mahsobhy3@gmail.com
             </li>
-            <li><i class="fa-solid fa-globe"> </i> <span>Website</span>
-             <a href="https://mosobhy01.github.io/Mahmoud_Sobhy/" target="_blank" style="text-decoration: none; color:#077c6f; font-weight: bold;" >Mahmoud Sobhy</a>
+            <li>
+              <i class="fa-solid fa-globe"> </i> <span>Website</span>
+              <a
+                href="https://mosobhy01.github.io/Mahmoud_Sobhy/"
+                target="_blank"
+                style="text-decoration: none; color: #077c6f; font-weight: bold"
+                >Mahmoud Sobhy</a
+              >
             </li>
             <li>
               <i class="fa-solid fa-location-dot"></i><span>ADDRESS</span>
