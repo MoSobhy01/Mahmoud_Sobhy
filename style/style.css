@@ -144,6 +144,7 @@ body {
 .header .container .nav ul li {
   padding: 8px;
   font-weight: 400;
+  display: flex;
   text-transform: uppercase;
   position: relative;
 }
@@ -151,7 +152,7 @@ body {
   cursor: pointer;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header .container .nav ul li:hover::after {
     content: "";
     width: 100%;
@@ -166,6 +167,7 @@ body {
 
 .header .container .nav ul a {
   text-decoration: none;
+  flex: 1;
   color: var(--nav-links);
   font-size: 1rem;
 }
@@ -178,7 +180,7 @@ body {
   letter-spacing: -3px;
   display: flex;
 }
-@media (max-width: 820px) {
+@media (max-width: 992px) {
   .header .container {
     flex-direction: column;
     flex-wrap: wrap;
@@ -580,6 +582,7 @@ div.games.spframe.block .fa-solid {
   border: none;
   padding: 10px;
 }
+
 
 .dark:hover,.light:hover{
   cursor: pointer;
