@@ -1,6 +1,5 @@
-:root  {
-
-    --main-head: #00564d;
+:root {
+  --main-head: #00564d;
   --main-body: #969696;
   --frame-background: #232323;
   --block-background: #2828289e;
@@ -196,7 +195,6 @@ body {
     width: 100%;
   }
   .header .container .nav ul {
-    
     padding-top: 10px;
     padding: 0px;
     position: absolute;
@@ -215,7 +213,6 @@ body {
   }
   .header .container .nav .fa-bars:hover + ul,
   .header .container .nav ul:hover {
-   
     z-index: 3;
     transition: 0.4s;
     transform: translateY(224%);
@@ -425,13 +422,13 @@ div.games.spframe.block .fa-solid {
 }
 .Tools {
   padding-top: 50px;
-    padding-bottom: 30px;
-    background-color: var(--tools-backg);
-    width: 100%;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  padding-bottom: 30px;
+  background-color: var(--tools-backg);
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .sphead i {
   font-size: 2.2rem;
@@ -479,7 +476,7 @@ div.games.spframe.block .fa-solid {
 .Projects .container .spframe {
   width: 350px;
   height: 400px;
-  
+
   transition: 0.5s;
   display: flex;
   flex-direction: column;
@@ -492,7 +489,7 @@ div.games.spframe.block .fa-solid {
 }
 .Projects .container .spframe img {
   display: block;
-  max-width: 100% ;
+  max-width: 100%;
 
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
@@ -509,8 +506,7 @@ div.games.spframe.block .fa-solid {
 }
 .spdesc h3 {
   color: var(--nav-links);
-      filter: contrast(2.5) hue-rotate(-20deg);
-
+  filter: contrast(2.5) hue-rotate(-20deg);
 }
 .spdesc p {
   color: var(--main-body);
@@ -532,7 +528,7 @@ div.games.spframe.block .fa-solid {
   padding-top: 30px;
   background-color: var(--contact-backg);
 }
-.contact .sphead{
+.contact .sphead {
   margin: 0px;
 }
 .contact .container a {
@@ -544,7 +540,6 @@ div.games.spframe.block .fa-solid {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
 }
 .contact p {
   color: var(--main-head);
@@ -562,7 +557,6 @@ div.games.spframe.block .fa-solid {
   display: block;
   width: 50px;
   padding: 5px;
-  
 }
 .About .sphead a {
   padding-top: 10px;
@@ -578,28 +572,37 @@ div.games.spframe.block .fa-solid {
   background-color: var(--main-head);
   border-radius: 15px;
   color: var(--main-body);
-
   border: none;
-  padding: 10px;
+  padding: 7px;
 }
-
-
-.dark:hover,.light:hover{
+button:hover{
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.727);
-  color: var(--nav-links);
 }
-.dark,.light{
-  background-color: var(--main-head);
-  display: block;
+.dark i:hover {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: orange;
+}
+.light i:hover{
+  color: whitesmoke;
+} 
+.dark,
+.light {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
-  color: var(--main-body);
+  position: relative;
   border-radius: 20px;
-  width: 125px;
-  height: 30px;
-  font-weight: bold;
-  margin-bottom: 10px;
 }
-.light{
+.dark i {
+  font-size: 1.65rem;
+  color: var(--nav-links);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+.light {
   display: none;
 }
